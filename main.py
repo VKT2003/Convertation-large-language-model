@@ -31,6 +31,16 @@ st.title("Conversation Model")
 # User input text box
 user_input = st.text_input("Your message:", "")
 
+
+hide = """
+<style>
+div[data-testid="stConnectionStatus"] {
+    display: none !important;
+</style>
+"""
+
+st.markdown(hide, unsafe_allow_html=True)
+
 # Generate button
 if st.button("Generate Response"):
     # Generate response
